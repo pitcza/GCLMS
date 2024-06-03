@@ -2,10 +2,6 @@
     <div class="content" [ngClass]="{'collapsed': isSidebarCollapsed}">
         <!-- HEADER -->
         <div class="header">
-            <button class="menu-icon-button" (click)="toggleSidebar()"> 
-                <i *ngIf="!isSidebarCollapsed" class='bx bxs-chevrons-left'></i>
-                <i *ngIf="isSidebarCollapsed" class='bx bxs-chevrons-right'></i>
-            </button>
             <strong> CATALOGING </strong>
         </div>
 
@@ -24,6 +20,10 @@
                     <h1> Juan Dela Cruz </h1>
                     <h2> ADMIN </h2>
                 </div>
+
+                <button class="menu-icon-button" (click)="toggleSidebar()"> 
+                    <i class='bx bx-menu' ></i>
+                </button>
             </div>
 
             <!-- SIDEBAR TABS -->

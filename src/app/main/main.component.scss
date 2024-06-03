@@ -9,15 +9,14 @@
     top: 0;
     margin-left: 220px;
     width: calc(100% - 220px);
-    background-color: var(--primary-color);
+    background-color: var(--dark-green);
     height: 70px;
-    border-bottom: 2px solid var(--border-color);
-    // box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.322);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.322);
     padding: 15px 20px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--main-green);
+    color: var(--bg-color);
     z-index: 2;
     transition: all 0.3s ease;
 }
@@ -29,17 +28,19 @@
 
 /* MENU */
 .menu-icon-button {
+    position: absolute;
     background: none;
     border: none;
     font-size: 24px;
     padding: 5px;
-    margin-right: 10px;
-    margin-top: 5px;
+    right: 0;
+    top: 0;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
 .menu-icon-button:hover {
-    color: var(--main-green);
+    color: var(--secondary-color);
 }
 
 /* MAIN CONTENT */
@@ -193,9 +194,21 @@ ul ul {
     width: 70px; 
 }
 
+.sidebar-content.collapsed .menu-icon-button {
+    position: absolute;
+    font-size: 24px;
+    padding: 5px;
+    align-self: center;
+    margin-top: 5px;
+    left: 0;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
 .sidebar-content.collapsed .logo img {
     height: 40px;
     width: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
