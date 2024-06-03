@@ -1,0 +1,236 @@
+
+.content {
+    display: flex;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    background-color: var(--primary-color);
+    height: 70px;
+    border-bottom: 2px solid var(--border-color);
+    // box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.322);
+    padding: 15px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--main-green);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+/* MENU */
+.menu-icon-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.menu-icon-button:hover {
+    color: var(--main-green);
+}
+
+/* MAIN CONTENT */
+.body-content {
+    margin-left: 240px;
+    padding-top: 90px;
+    width: calc(100% - 220px);
+    transition: all 0.3s ease;
+}
+
+/* SIDEBAR CONTENTS */
+.logo img {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.systemname h1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.systemname h2 {
+    text-align: center;
+    font-size: 14px;
+    opacity: 50%;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.logo-title {
+    padding-bottom: 10%;
+    border-bottom: 1px solid var(--darker-green);
+}
+
+
+.sidebar-content {
+    position: relative;
+    background-color: var(--green-hover);
+    color: var(--primary-color);
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 30px 0px;
+    z-index: 100;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.322);
+    transition: all 0.3s ease;
+}
+
+.sidebar-content::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-content a {
+    color: var(--primary-color);
+}
+
+.sidebar-content-tabs {
+    position: relative;
+}
+
+.admin-tabs {
+    padding: 0;
+    list-style: none;
+}
+
+.admin-tab a {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--darker-green);
+    transition: 0.3s ease;
+}
+
+.admin-tab a:hover {
+    background-color: var(--dark-green);
+    border-right: 3px solid var(--main-green);
+}
+
+.admin-tab a.active-link {
+    font-weight: 700;
+    background-color: var(--dark-green);
+    border-right: 3px solid var(--main-green);
+}
+
+.tab-link .tab-link-name {
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.admin-tabs .tab-link-icon {
+    font-size: 20px;
+}
+
+ul ul {
+    list-style: none;
+}
+
+
+.logoutbtn .logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+}
+
+.logoutbtn .logout:hover {
+    color: var(--main-green);
+}
+
+.logoutbtn {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+// RESPONSIVE SIDEBAR SIZE 
+@media (max-width: 1320px) {
+    .sidebar-content.collapsed {
+        width: 80px;
+    }
+  
+    .header {
+        margin-left: 220px;
+        width: 100%;
+    }
+
+    .body-content {
+        margin-left: 240px;
+        width: calc(100% - 220px);
+    }
+
+}
+  
+
+// FOR MINIMIZING SIDEBAR 
+.sidebar-content.collapsed {
+    width: 70px; 
+}
+
+.sidebar-content.collapsed .logo img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.sidebar-content.collapsed .tab-link-icon {
+    padding-left: 10px;
+}
+
+.sidebar-content.collapsed .systemname, 
+.sidebar-content.collapsed .tab-link-name {
+    display: none;
+}
+
+.sidebar-content.collapsed .logoutbtn {
+    bottom: 20px;
+    width: 70px;
+}
+
+.content.collapsed .header {
+    margin-left: 70px;
+    transition: margin-left 0.3s;
+    width: calc(100% - 70px);
+}
+
+.content.collapsed .body-content {
+    margin-left: 90px;
+    transition: margin-left 0.3s;
+    width: calc(100% - 70px);
+}
+
+.sidebar-content.collapsed .tab-link-name,
+.sidebar-content.collapsed .systemname {
+    display: none;
+}
+
+.sidebar-content.collapsed .tab-link-icon {
+    text-align: center;
+    display: block;
+}
