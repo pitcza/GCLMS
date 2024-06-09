@@ -3,6 +3,14 @@ body, input {
   z-index: 100;
 }
 
+::ng-deep input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 40px white inset !important;
+    -webkit-text-fill-color: #333 !important;
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    margin: 2px;
+}
+
 .container {
   background-image: url('/assets/images/building.jpg');
   background-size: cover;
@@ -116,7 +124,7 @@ form.sign-in-form {
   background: none;
   outline: none;
   border: none;
-  line-height: 1;
+  width: 90%;
   font-weight: 500;
   font-size: 1.1rem;
   color: #333;
@@ -368,6 +376,14 @@ form.sign-in-form {
     left: 75%;
   }
   
+  ::ng-deep input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #333 !important;
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    margin: 2px;
+  }
+
   .title {
     font-size: 1.5rem;
   }
